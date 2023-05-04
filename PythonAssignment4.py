@@ -18,17 +18,17 @@ print(list2)
    #where Shape’s area is 0 by default.
 '''
 class Shape():
-    def __init__(self):
-        pass
+    #def __init__(self):
+        #pass
     def area(self):
         return 0
 class Square(Shape):
     def __init__(self, length):
-        Shape.__init__(self)
+        #Shape.__init__(self) 
         self.length = length
     def area(self):
         return self.length*self.length
-Square= Square(4)
+Square= Square(5)
 print(Square.area())
 '''
 #3.Create a class to find three elements that sum to zero from a set of n real numbers
@@ -71,9 +71,9 @@ class Time():
     def displayMinute(self):
 	    print (int(self.hours*60+self.mins),"minutes")
 
-a = Time(2,50)
-b = Time(1,20)
-c = Time.addTime(a,b)
+t1 = Time(2,50)
+t2 = Time(1,20)
+c = Time.addTime(t1,t2)
 c.displayTime()
 c.displayMinute()
 '''
@@ -88,12 +88,12 @@ c.displayMinute()
      ###Otherwise, print “You are old"
 '''
 class Person:
-    def __init__(self,initialAge):
-        if initialAge < 0:
+    def __init__(self,age):
+        if age < 0:
             self.age = 0
             print("Age is not valid, setting age to 0.")
         else:
-            self.age = initialAge
+            self.age = age
     def amIOld(self):
         if self.age < 13:
             print("You are young.")
@@ -102,18 +102,14 @@ class Person:
         else:
             print("You are old.")
     def yearPasses(self):
-        self.age += 1
-#age=Person(16)
-#age.amIOld()
-Input_age=list(input("Enter the age: "))
-for i in range(0,len(Input_age)):
-    age=int(input("Enter the age: "))
-    msg=Person(age)
-    msg.amIOld()
-    for j in range(0,3):
-        msg.yearPasses()
-    msg.amIOld
-'''   
+        self.age += 12
+        print(self.age)
+age=int(input("Enter the age: "))
+msg=Person(age)
+msg.amIOld()
+msg.yearPasses()
+msg.amIOld
+'''  
 
 
 
